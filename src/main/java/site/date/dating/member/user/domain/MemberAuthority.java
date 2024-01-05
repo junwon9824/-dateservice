@@ -1,8 +1,5 @@
 package site.date.dating.member.user.domain;
 
- import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
 import lombok.*;
 
 

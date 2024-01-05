@@ -1,5 +1,6 @@
 package site.date.dating.common.jwt;
 
+ import lombok.Value;
  import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
