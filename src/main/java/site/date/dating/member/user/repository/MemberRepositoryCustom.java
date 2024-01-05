@@ -2,10 +2,9 @@ package site.date.dating.member.user.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import site.hospital.member.admin.repository.dto.AdminMemberSearchCondition;
-import site.hospital.member.user.domain.Authorization;
-import site.hospital.member.user.domain.Member;
-import site.hospital.member.user.domain.MemberAuthority;
+import site.date.dating.member.admin.repository.dto.AdminMemberSearchCondition;
+import site.date.dating.member.user.domain.Member;
+import site.date.dating.member.user.domain.*;
 
 import java.util.List;
 

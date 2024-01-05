@@ -1,5 +1,6 @@
 package site.date.dating.common.service;
 
+import javax.servlet.ServletRequest;
 
 public interface ManagerJwtService {
 

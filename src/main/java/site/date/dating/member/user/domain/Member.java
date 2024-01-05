@@ -1,11 +1,12 @@
 package site.date.dating.member.user.domain;
 
- import lombok.*;
+import com.sun.istack.NotNull;
+import lombok.*;
+import site.date.dating.common.domain.BaseTimeEntity;
 
-import java.util.ArrayList;
+import javax.persistence.*;
+ import java.util.ArrayList;
 import java.util.List;
- import javax.persistence.Entity;
-
 
 @Entity
 @Getter
@@ -18,20 +19,20 @@ public class Member extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
     private Long id;
-
-    @OneToMany(mappedBy = "member")
-    private List<Question> questions = new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<Bookmark> bookmarks = new ArrayList<>();
-    @OneToMany(mappedBy = "member")
-    private List<Review> reviews = new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<Answer> answers = new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<ReviewLike> reviewLikes = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<Question> questions = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<Bookmark> bookmarks = new ArrayList<>();
+//    @OneToMany(mappedBy = "member")
+//    private List<Review> reviews = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<Answer> answers = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<ReviewLike> reviewLikes = new ArrayList<>();
 
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)

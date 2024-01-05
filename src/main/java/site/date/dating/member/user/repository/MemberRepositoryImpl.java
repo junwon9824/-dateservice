@@ -1,7 +1,17 @@
 package site.date.dating.member.user.repository;
 
+import com.querydsl.core.QueryResults;
+import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import site.date.dating.member.admin.repository.dto.AdminMemberSearchCondition;
+import site.date.dating.member.user.domain.Authorization;
+import site.date.dating.member.user.domain.Member;
 import site.date.dating.member.user.domain.MemberAuthority;
- import java.util.List;
+
+import javax.persistence.EntityManager;
+import java.util.List;
 
 public class MemberRepositoryImpl implements MemberRepositoryCustom {
 

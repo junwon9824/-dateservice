@@ -1,7 +1,7 @@
 package site.date.dating.member.user.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import site.hospital.member.user.domain.Member;
+import site.date.dating.member.user.domain.Member;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,16 +1,19 @@
 package site.date.dating.common.service;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import site.date.dating.common.jwt.TokenProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+import site.hospital.common.jwt.TokenProvider;
 
-import java.nio.file.AccessDeniedException;
-import java.util.logging.Logger;
-
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
-@Slf4j
 public class ManagerJwtServiceImpl implements ManagerJwtService {
 
     public static final String AUTHORIZATION_HEADER = "Authorization";

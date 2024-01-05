@@ -1,7 +1,14 @@
 package site.date.dating.common.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import site.date.dating.common.jwt.CustomUserDetail;
+import site.date.dating.member.user.domain.Authorization;
 import site.date.dating.member.user.domain.Member;
 import site.date.dating.member.user.domain.MemberAuthority;
 import site.date.dating.member.user.repository.MemberRepository;

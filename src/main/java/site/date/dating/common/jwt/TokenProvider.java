@@ -1,7 +1,19 @@
 package site.date.dating.common.jwt;
 
- import lombok.Value;
+ import io.jsonwebtoken.Claims;
+ import io.jsonwebtoken.Jwts;
+ import io.jsonwebtoken.*;
+ import io.jsonwebtoken.SignatureAlgorithm;
  import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -107,7 +119,6 @@ public class TokenProvider implements Serializable {
     public boolean validateToken(String token) {
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
-
             return true;
         } catch (io.jsonwebtoken.security.SecurityException | MalformedJwtException e) {
             log.info("잘못된 JWT 서명입니다.");

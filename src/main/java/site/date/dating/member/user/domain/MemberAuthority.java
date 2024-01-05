@@ -1,6 +1,11 @@
 package site.date.dating.member.user.domain;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 
 @Entity

@@ -1,5 +1,7 @@
 package site.date.dating.common.jwt;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import site.date.dating.member.user.domain.MemberStatus;
 
 import java.util.Collection;
