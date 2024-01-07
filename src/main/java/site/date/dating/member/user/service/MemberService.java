@@ -1,9 +1,8 @@
 package site.date.dating.member.user.service;
 
 import org.springframework.http.ResponseEntity;
-import site.hospital.member.user.api.dto.*;
-import site.hospital.member.user.domain.Authority;
-import site.hospital.member.user.domain.Member;
+import site.date.dating.member.user.api.dto.*;
+import site.date.dating.member.user.domain.*;
 
 public interface MemberService {
 

@@ -3,8 +3,8 @@ package site.date.dating.member.user.api.dto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
-import site.hospital.member.user.domain.Member;
-import site.hospital.member.user.domain.MemberStatus;
+import site.date.dating.member.user.domain.Member;
+import site.date.dating.member.user.domain.*;
 
 @Data
 @Builder(access = AccessLevel.PRIVATE)

@@ -7,7 +7,8 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
-import site.hospital.common.jwt.TokenProvider;
+import site.date.dating.common.jwt.TokenProvider;
+
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;

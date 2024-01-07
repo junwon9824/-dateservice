@@ -2,6 +2,7 @@ package site.date.dating.member.admin.repository.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import site.date.dating.member.user.domain.MemberStatus;
 
 @Data
 public class AdminMemberSearchCondition {

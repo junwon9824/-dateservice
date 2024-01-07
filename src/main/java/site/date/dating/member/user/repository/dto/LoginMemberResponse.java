@@ -1,7 +1,7 @@
 package site.date.dating.member.user.repository.dto;
 
 import lombok.Data;
-import site.hospital.member.user.domain.MemberStatus;
+import site.date.dating.member.user.domain.MemberStatus;
 
 @Data
 public class LoginMemberResponse {

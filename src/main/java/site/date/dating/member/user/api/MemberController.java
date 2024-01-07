@@ -4,10 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import site.date.dating.member.user.api.dto.MemberCreateRequest;
-import site.date.dating.member.user.api.dto.MemberLoginRequest;
-import site.date.dating.member.user.api.dto.MemberLoginResponse;
-import site.date.dating.member.user.api.dto.MemberModifyRequest;
+import site.date.dating.member.user.api.dto.*;
 import site.date.dating.member.user.service.MemberService;
 
 @RestController

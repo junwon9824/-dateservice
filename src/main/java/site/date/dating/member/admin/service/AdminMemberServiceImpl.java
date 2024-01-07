@@ -7,6 +7,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import site.date.dating.member.admin.api.dto.*;
+import site.date.dating.member.admin.api.dto.MemberAdminModifyRequest;
+import site.date.dating.member.admin.repository.dto.*;
+import site.date.dating.member.user.api.dto.*;
+import site.date.dating.member.user.api.dto.MemberSearchResponse;
+import site.date.dating.member.user.domain.*;
+import site.date.dating.member.user.repository.AuthorityRepository;
+import site.date.dating.member.user.repository.MemberAuthorityRepository;
+import site.date.dating.member.user.repository.MemberRepository;
+import site.date.dating.member.user.service.MemberService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,8 +30,7 @@ public class AdminMemberServiceImpl implements AdminMemberService {
     private final MemberRepository memberRepository;
     private final AuthorityRepository authorityRepository;
     private final MemberAuthorityRepository memberAuthorityRepository;
-    private final HospitalRepository hospitalRepository;
-    private final PasswordEncoder passwordEncoder;
+     private final PasswordEncoder passwordEncoder;
 
     private static final String MEMBER_NOT_EXISTS = "멤버가 존재하지 않습니다.";
 
@@ -129,6 +138,7 @@ public class AdminMemberServiceImpl implements AdminMemberService {
             confirmHospitalPresence(createdMember);
             giveManagerAuthority(createdMember);
         }
+
         else if (confirmAdminAuthority(createdMember)) {
             giveManagerAuthorityByAdmin(createdMember);
         }
@@ -216,10 +226,10 @@ public class AdminMemberServiceImpl implements AdminMemberService {
         return authorityManager;
     }
 
-    private void confirmHospitalPresence(Member member) {
-        hospitalRepository.findById(member.getHospitalNumber())
-                .orElseThrow(() -> new IllegalStateException("해당 번호에 속하는 병원이 존재하지 않습니다."));
-    }
+//    private void confirmHospitalPresence(Member member) {
+//        hospitalRepository.findById(member.getHospitalNumber())
+//                .orElseThrow(() -> new IllegalStateException("해당 번호에 속하는 병원이 존재하지 않습니다."));
+//    }
 
     private boolean confirmManagerAuthority(Member modifyMember) {
         return modifyMember.getMemberStatus() == MemberStatus.STAFF;
