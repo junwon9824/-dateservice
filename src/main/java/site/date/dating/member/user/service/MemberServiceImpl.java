@@ -174,8 +174,11 @@ public class MemberServiceImpl implements MemberService {
             return authentication;
 
         } catch(AuthenticationException e){
-            throw new ServiceException(HttpStatus.NOT_FOUND, "아이디와 비밀번호가 일치하지 않습니다.");
+//            throw new ServiceException(HttpStatus.NOT_FOUND, "아이디와 비밀번호가 일치하지 않습니다.");
+            throw new RuntimeException("아이디와 비밀번호가 일치하지 않습니다.", e);
+
         }
+
     }
 
     private UsernamePasswordAuthenticationToken createAuthenticationToken(

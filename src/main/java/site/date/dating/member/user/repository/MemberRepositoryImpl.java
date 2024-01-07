@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import site.date.dating.member.admin.repository.dto.AdminMemberSearchCondition;
 import site.date.dating.member.user.domain.Authorization;
 import site.date.dating.member.user.domain.Member;
-import site.date.dating.member.user.domain.MemberAuthority;
+import site.date.dating.member.user.domain.*;
 
 import javax.persistence.EntityManager;
 import java.util.List;
