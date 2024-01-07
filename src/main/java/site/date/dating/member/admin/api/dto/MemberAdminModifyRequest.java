@@ -1,7 +1,7 @@
 package site.date.dating.member.admin.api.dto;
 
 import lombok.Data;
-import site.hospital.member.user.domain.MemberStatus;
+import site.date.dating.member.user.domain.MemberStatus;
 
 import javax.validation.constraints.NotNull;
 

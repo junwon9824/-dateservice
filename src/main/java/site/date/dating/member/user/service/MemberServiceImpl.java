@@ -1,6 +1,7 @@
 package site.date.dating.member.user.service;
 
 import lombok.RequiredArgsConstructor;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,15 +13,17 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import site.hospital.common.exception.ServiceException;
-import site.hospital.common.jwt.CustomUserDetail;
-import site.hospital.common.jwt.JwtFilter;
-import site.hospital.common.jwt.TokenProvider;
-import site.hospital.member.user.api.dto.*;
-import site.hospital.member.user.domain.*;
-import site.hospital.member.user.repository.AuthorityRepository;
-import site.hospital.member.user.repository.MemberAuthorityRepository;
-import site.hospital.member.user.repository.MemberRepository;
+import site.date.dating.common.jwt.CustomUserDetail;
+import site.date.dating.common.jwt.JwtFilter;
+import site.date.dating.common.jwt.TokenProvider;
+import site.date.dating.member.user.api.dto.*;
+import site.date.dating.member.user.domain.Authority;
+import site.date.dating.member.user.domain.Member;
+import site.date.dating.member.user.domain.MemberAuthority;
+import site.date.dating.member.user.domain.MemberStatus;
+import site.date.dating.member.user.repository.AuthorityRepository;
+import site.date.dating.member.user.repository.MemberAuthorityRepository;
+import site.date.dating.member.user.repository.MemberRepository;
 
 import java.util.List;
 
